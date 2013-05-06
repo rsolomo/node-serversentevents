@@ -1,6 +1,6 @@
 {
   "name": "serversentevents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight tool for building strings for Server-Sent Events.",
   "main": "sse.js",
   "directories": {
