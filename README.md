@@ -28,7 +28,7 @@ var s = sse()
 
 Then pass it along to res.write().
 
-Check out the examples folder for a full server and client example.
+Check out the [examples](https://github.com/rsolomo/node-serversentevents/tree/master/examples) folder for a full server and client example.
 
 ## License
 
