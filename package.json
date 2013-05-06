@@ -1,15 +1,19 @@
 {
   "name": "serversentevents",
   "version": "0.0.1",
-  "description": "ERROR: No README.md file found!",
+  "description": "Lightweight tool for building strings for Server-Sent Events.",
   "main": "sse.js",
   "directories": {
+    "example": "examples",
     "test": "test"
   },
   "scripts": {
     "test": "mocha"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rsolomo/node-serversentevents.git"
+  },
   "keywords": [
     "sse",
     "serversentevents"
