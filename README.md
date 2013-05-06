@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rsolomo/node-serversentevents.png?branch=master)](https://travis-ci.org/rsolomo/node-serversentevents)
+
 # serversentevents
 
 Lightweight tool for building strings for [Server-Sent Events](http://www.w3.org/TR/eventsource/).
