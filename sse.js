@@ -39,7 +39,7 @@ ServerSentEvent.prototype.comment = function comment(str) {
   return this
 }
 
-ServerSentEvent.prototype.toEvent = function toEvent() {
+ServerSentEvent.prototype.toString = function toString() {
   var str = ''
   if (this._event) str += 'event:' + this._event + '\n'
   if (this._id) str += 'id:' + this._id + '\n'

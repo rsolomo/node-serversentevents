@@ -37,15 +37,16 @@ describe('sse', function() {
     })
   })
 
-  describe('toEvent', function() {
+  describe('toString', function() {
     it('should return a server sent event string', function() {
-      var str = sse()
+      var s = sse()
         .event('update')
         .data({ prop : 'something' })
         .id(57)
         .retry(10000)
         .comment('a comment')
-        .toEvent()
+//        .toString()
+      var str = s + ''
 
       assert.notEqual(str.indexOf('event:update\n'), -1)
       assert.notEqual(str.indexOf('id:57\n'), -1)

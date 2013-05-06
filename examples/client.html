@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server-Sent Events</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <script>
+  ;(function() {
+    var source = new EventSource('/events')
+    source.addEventListener('ping', function(event) {
+      document.body.innerHTML += '<p>ping event recieved</p>'
+      document.body.innerHTML += '<p>data: ' + event.data + '</p>'
+    }, false)
+      
+    source.addEventListener('open', function(event) {
+      document.body.innerHTML += '<p>open event recieved</p>'
+    }, false)
+
+    source.addEventListener('error', function(event) {
+      document.body.innerHTML += '<p>error event recieved</p>'
+    }, false)
+  }())
+  </script>
+</body>
+</html>
