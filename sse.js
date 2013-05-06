@@ -19,8 +19,12 @@ ServerSentEvent.prototype.event = function event(str) {
   return this
 }
 
-ServerSentEvent.prototype.data = function data(obj) {
-  this._data = JSON.stringify(obj)
+ServerSentEvent.prototype.data = function data(obj, bool) {
+  if (bool === false) {
+    this._data = obj
+  } else {
+    this._data = JSON.stringify(obj)
+  }
   return this
 }
 
