@@ -6,7 +6,9 @@ var id = 0
 http.createServer(function(req, res) {
   if (req.url === '/events') serveEvents(req, res)
   if (req.url === '' || req.url === '/') serveClient(req, res)
-}).listen(8080)
+}).listen(8080, function() {
+  console.log('Server listening on 127.0.0.1:8080')
+})
 
 function serveEvents(req, res) {
   res.writeHead(200, { 'Content-Type' : 'text/event-stream' })
@@ -28,5 +30,5 @@ function serveEvents(req, res) {
 
 function serveClient(req, res) {
   res.writeHead(200, { 'Content-Type' : 'text/html' })
-  fstream = fs.createReadStream('client.html').pipe(res)
+  fs.createReadStream('client.html').pipe(res)
 }
